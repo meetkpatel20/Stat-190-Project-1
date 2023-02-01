@@ -1,0 +1,211 @@
+wo_start_date,wo_finish_date,OrderNo,Order_Info,location_id,is_failure,cause_code,component_type
+2020-06-03T00:00:00.000+0000,2020-06-03T00:00:00.000+0000,60949700,ZCS7:  Converter coolant hose - replaced,Turbine 11,1,null,Converter Cooling system
+2020-06-03T00:00:00.000+0000,2020-06-03T00:00:00.000+0000,60956418,ZCS7:  Gear oil cooler motor - replaced,Turbine 10,1,null,null
+2020-06-29T00:00:00.000+0000,2020-06-29T00:00:00.000+0000,60956418,ZCS7:  Gear oil cooler motor - replaced,Turbine 10,1,null,Transmission Cooling system
+2020-06-04T00:00:00.000+0000,2020-06-04T00:00:00.000+0000,60956838,ZCS7:  4101 : Gear oil temperature warning,Turbine 19,1,null,null
+2020-06-09T00:00:00.000+0000,2020-06-09T00:00:00.000+0000,60957019,ZCS3:  Delta temp high,Turbine 1,1,null,null
+2020-06-01T00:00:00.000+0000,2020-06-02T00:00:00.000+0000,60957019,ZCS3:  Delta temp high,Turbine 1,1,null,Converter No subsystem (Converter)
+2020-06-02T00:00:00.000+0000,2020-06-02T00:00:00.000+0000,60957491,ZCS7:  Converter controller - repaired,Turbine 14,1,null,null
+2020-06-01T00:00:00.000+0000,2020-06-01T00:00:00.000+0000,60957491,ZCS7:  Converter controller - repaired,Turbine 14,1,null,Converter No subsystem (Converter)
+2020-06-02T00:00:00.000+0000,2020-06-02T00:00:00.000+0000,60959243,ZCS7:  T097 - Converter Breaker Temp High,Turbine 6,1,null,null
+2020-06-01T00:00:00.000+0000,2020-06-02T00:00:00.000+0000,60959243,ZCS7:  T097 - Converter Breaker Temp High,Turbine 6,1,null,Converter No subsystem (Converter)
+2020-06-01T00:00:00.000+0000,2020-06-02T00:00:00.000+0000,60959426,ZCS7:  Converter controller - repaired,Turbine 13,1,null,null
+2020-06-15T00:00:00.000+0000,2020-06-15T00:00:00.000+0000,60959426,ZCS7:  Converter controller - repaired,Turbine 13,1,null,Converter No subsystem (Converter)
+2020-06-02T00:00:00.000+0000,2020-06-02T00:00:00.000+0000,60959428,ZCS7:  Converter controller - repaired,Turbine 7,1,null,null
+2020-06-05T00:00:00.000+0000,2020-06-05T00:00:00.000+0000,60959428,ZCS7:  Converter controller - repaired,Turbine 7,1,null,Converter No subsystem (Converter)
+2020-06-15T00:00:00.000+0000,2020-06-15T00:00:00.000+0000,60959509,ZCS7:  13303 : Inv. cool. w. temp high,Turbine 9,1,null,null
+2020-06-01T00:00:00.000+0000,2020-06-01T00:00:00.000+0000,60959598,ZCS7:  STIC box not responding - replaced,Turbine 13,1,null,null
+2020-06-02T00:00:00.000+0000,2020-06-02T00:00:00.000+0000,60959598,ZCS7:  STIC box not responding - replaced,Turbine 13,1,null,Monitoring equipment No Subsystem (Monitoring equipment)
+2020-06-08T00:00:00.000+0000,2020-06-08T00:00:00.000+0000,60959633,ZCS3:  Gearoil blower superheated,Turbine 5,1,null,null
+2020-06-03T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,60959633,ZCS3:  Gearoil blower superheated,Turbine 5,1,null,Transmission Cooling system
+2020-06-02T00:00:00.000+0000,2020-06-02T00:00:00.000+0000,60959667,"ZCS7:  3172 : Low oil pressure, blade B",Turbine 16,1,null,null
+2020-06-05T00:00:00.000+0000,2020-06-05T00:00:00.000+0000,60959702,ZCS3:  broken yaw gear,Turbine 4,1,null,null
+2020-06-02T00:00:00.000+0000,2020-06-02T00:00:00.000+0000,60959702,ZCS3:  broken yaw gear,Turbine 4,1,null,Yaw Yaw unit 3
+2020-06-05T00:00:00.000+0000,2020-06-05T00:00:00.000+0000,60959843,ZCS7:  4101 : Gear oil temperature warning,Turbine 20,1,null,null
+2020-06-03T00:00:00.000+0000,2020-06-05T00:00:00.000+0000,60959846,ZCS7:  4102 : Gear oil temperature high,Turbine 20,1,null,null
+2020-06-04T00:00:00.000+0000,2020-06-05T00:00:00.000+0000,60960269,ZCS3:  Reactor swap,Turbine 4,1,null,null
+2020-06-03T00:00:00.000+0000,2020-06-04T00:00:00.000+0000,60960269,ZCS3:  Reactor swap,Turbine 4,1,null,Protection and control system 132Kv system
+2020-06-04T00:00:00.000+0000,2020-06-04T00:00:00.000+0000,60962214,ZCS7:  4112 : Gearoil level too low,Turbine 9,1,null,null
+2020-06-04T00:00:00.000+0000,2020-06-05T00:00:00.000+0000,60963678,ZCS7:  UPS batteries - replaced,Turbine 10,1,null,null
+2020-06-05T00:00:00.000+0000,2020-06-05T00:00:00.000+0000,60963678,ZCS7:  UPS batteries - replaced,Turbine 10,1,null,Controller UPS
+2020-06-07T00:00:00.000+0000,2020-06-07T00:00:00.000+0000,60963821,ZCS7:,Turbine 17,1,null,null
+2020-06-07T00:00:00.000+0000,2020-06-07T00:00:00.000+0000,61017393,ZCS7: 90616 : Converter Cabinet Generator Side,Turbine 18,1,null,null
+2020-06-06T00:00:00.000+0000,2020-06-07T00:00:00.000+0000,61020571,ZCS7: 63209 : CAN:Hub Communication error,Turbine 19,1,null,null
+2020-06-07T00:00:00.000+0000,2020-06-28T00:00:00.000+0000,61022811,ZCS7: 4112 : Gearoil level too low,Turbine 9,1,null,null
+2020-06-08T00:00:00.000+0000,2020-06-08T00:00:00.000+0000,61022901,"ZCS7: 3174 : Low oil pressure, pump station",Turbine 18,1,null,null
+2020-06-09T00:00:00.000+0000,2020-06-09T00:00:00.000+0000,61023067,ZCS7: Converter coolant hose - repaired,Turbine 15,1,null,null
+2020-06-08T00:00:00.000+0000,2020-06-08T00:00:00.000+0000,61023067,ZCS7: Converter coolant hose - repaired,Turbine 15,1,null,Converter Cooling system
+2020-06-09T00:00:00.000+0000,2020-06-09T00:00:00.000+0000,61023169,ZCS7: 4112 : Gearoil level too low,Turbine 17,1,null,null
+2020-06-09T00:00:00.000+0000,2020-06-09T00:00:00.000+0000,61023263,ZCS7: 4112 : Gearoil level too low,Turbine 16,1,null,null
+2020-06-09T00:00:00.000+0000,2020-06-09T00:00:00.000+0000,61024712,ZCS3: UPS battery Failure,Turbine 8,1,null,null
+2020-06-14T00:00:00.000+0000,2020-06-14T00:00:00.000+0000,61024712,ZCS3: UPS battery Failure,Turbine 8,1,null,Controller UPS
+2020-06-09T00:00:00.000+0000,2020-06-09T00:00:00.000+0000,61024997,ZCS7: 4112 : Gearoil level too low,Turbine 17,1,null,null
+2020-06-09T00:00:00.000+0000,2020-06-09T00:00:00.000+0000,61025128,ZCS7: UPS system - replaced,Turbine 7,1,null,null
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61025128,ZCS7: UPS system - replaced,Turbine 7,1,null,Controller UPS
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61025175,ZCS7: Low coolant,Turbine 1,1,null,null
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61025175,ZCS7: Low coolant,Turbine 1,1,null,Converter Cooling system
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61025361,ZCS7: UPS battery failure,Turbine 5,1,null,null
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61025361,ZCS7: UPS battery failure,Turbine 5,1,null,Controller UPS
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61025572,ZCS7: 4112 : Gearoil level too low,Turbine 17,1,null,null
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61025673,ZCS7:,Turbine 17,1,null,null
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61026217,ZCS7: UPS bypass error - replaced ups system,Turbine 7,1,null,null
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61026217,ZCS7: UPS bypass error - replaced ups system,Turbine 7,1,null,Controller UPS
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61027943,ZCS7: 7101 : Hyd oil level error,Turbine 16,1,null,null
+2020-06-10T00:00:00.000+0000,2020-06-10T00:00:00.000+0000,61028019,ZCS7: Low Hydro,Turbine 14,1,null,null
+2020-06-10T00:00:00.000+0000,2020-06-11T00:00:00.000+0000,61028019,ZCS7: Low Hydro,Turbine 14,1,null,Hydraulics No subsystem (Hydraulics)
+2020-06-10T00:00:00.000+0000,2020-06-11T00:00:00.000+0000,61028786,ZCS7: Hydraulic fluid - topped up,Turbine 13,1,null,null
+2020-06-11T00:00:00.000+0000,2020-06-29T00:00:00.000+0000,61028786,ZCS7: Hydraulic fluid - topped up,Turbine 13,1,null,Hydraulics Pump station
+2020-06-11T00:00:00.000+0000,2020-06-24T00:00:00.000+0000,61028889,ZCS7: Motor control valve - replaced,Turbine 7,1,null,null
+2020-06-11T00:00:00.000+0000,2020-06-11T00:00:00.000+0000,61028889,ZCS7: Motor control valve - replaced,Turbine 7,1,null,Converter Cooling system
+2020-06-11T00:00:00.000+0000,2020-06-11T00:00:00.000+0000,61029589,ZCS7: Gear oil - topped up,Turbine 13,1,null,null
+2020-06-11T00:00:00.000+0000,2020-06-11T00:00:00.000+0000,61030337,ZCS7: Controller circuit breaker - replaced,Turbine 13,1,null,null
+2020-06-11T00:00:00.000+0000,2020-06-11T00:00:00.000+0000,61030337,ZCS7: Controller circuit breaker - replaced,Turbine 13,1,null,Controller No subsystem (Controler)
+2020-06-13T00:00:00.000+0000,2020-06-14T00:00:00.000+0000,61030391,ZCS7: T097 - Replaced Yaw Gear,Turbine 6,1,null,null
+2020-06-13T00:00:00.000+0000,2020-06-24T00:00:00.000+0000,61030391,ZCS7: T097 - Replaced Yaw Gear,Turbine 6,1,null,Yaw Yaw unit 1
+2020-06-12T00:00:00.000+0000,2020-06-12T00:00:00.000+0000,61030600,ZCS7: Gear Oil Level Sensor - Replaced,Turbine 13,1,null,null
+2020-06-12T00:00:00.000+0000,2020-06-24T00:00:00.000+0000,61077335,ZCS3: Blade C RE10m Web Crack Repair,Turbine 13,1,null,null
+2020-06-16T00:00:00.000+0000,2020-06-16T00:00:00.000+0000,61077335,ZCS3: Blade C RE10m Web Crack Repair,Turbine 13,1,null,Blades Pressure side (Blades)
+2020-06-16T00:00:00.000+0000,2020-06-16T00:00:00.000+0000,61079804,ZCS7: Converter coolant hose - repaired,Turbine 7,1,null,null
+2020-06-17T00:00:00.000+0000,2020-06-17T00:00:00.000+0000,61079804,ZCS7: Converter coolant hose - repaired,Turbine 7,1,null,Converter Cooling system
+2020-06-17T00:00:00.000+0000,2020-06-17T00:00:00.000+0000,61085156,ZCS7: Yaw Gear 1,Turbine 1,1,null,null
+2020-06-19T00:00:00.000+0000,2020-06-19T00:00:00.000+0000,61085156,ZCS7: Yaw Gear 1,Turbine 1,1,null,Yaw Yaw unit 1
+2020-06-24T00:00:00.000+0000,2020-06-24T00:00:00.000+0000,61091012,ZCS7: 4112 : Gearoil level too low,Turbine 16,1,null,null
+2020-06-22T00:00:00.000+0000,2020-06-25T00:00:00.000+0000,61102081,ZCS7: 4101 : Gear oil temperature warning,Turbine 19,1,null,null
+2020-06-23T00:00:00.000+0000,2020-06-25T00:00:00.000+0000,61103731,ZCS7: 4102 : Gear oil temperature high,Turbine 3,1,null,null
+2020-06-22T00:00:00.000+0000,2020-06-22T00:00:00.000+0000,61105558,ZCS7: Vienna II T-50 blades C and B internal,Turbine 19,1,null,null
+2020-06-25T00:00:00.000+0000,2020-06-25T00:00:00.000+0000,61105977,ZCS7: Yaw gear #3,Turbine 4,1,null,null
+2020-06-25T00:00:00.000+0000,2020-06-25T00:00:00.000+0000,61105977,ZCS7: Yaw gear #3,Turbine 4,1,null,Yaw Yaw unit 3
+2020-06-29T00:00:00.000+0000,2020-06-29T00:00:00.000+0000,61106012,ZCS7: 63016 : Smoke in the inverter,Turbine 20,1,null,null
+2020-06-30T00:00:00.000+0000,2020-06-30T00:00:00.000+0000,61106517,ZCS7: 4112 : Gearoil level too low,Turbine 9,1,null,null
+2020-06-30T00:00:00.000+0000,2020-06-30T00:00:00.000+0000,61106817,ZCS7: Gear oil temp,Turbine 1,1,null,null
+2020-06-30T00:00:00.000+0000,2020-06-30T00:00:00.000+0000,61106817,ZCS7: Gear oil temp,Turbine 1,1,null,Transmission Cooling system
+2020-06-30T00:00:00.000+0000,2020-06-30T00:00:00.000+0000,61107985,ZCS7: Hydraulic pump coupling - replaced,Turbine 14,1,null,null
+2021-02-10T00:00:00.000+0000,2021-02-10T00:00:00.000+0000,61107985,ZCS7: Hydraulic pump coupling - replaced,Turbine 14,1,null,Hydraulics Pump station
+2021-02-10T00:00:00.000+0000,2021-02-10T00:00:00.000+0000,61107986,ZCS7: Converter coolant hose - repaired,Turbine 14,1,null,null
+2021-02-26T00:00:00.000+0000,2021-02-26T00:00:00.000+0000,61107986,ZCS7: Converter coolant hose - repaired,Turbine 14,1,null,Converter Cooling system
+2021-02-10T00:00:00.000+0000,2021-02-10T00:00:00.000+0000,61108002,ZCS7: 15229 : GrdInv: 229 DSP comms failure,Turbine 2,1,null,null
+2021-02-26T00:00:00.000+0000,2021-02-26T00:00:00.000+0000,61108759,ZCS7: 3144 : Hub: No feedback MTS-sens A,Turbine 19,1,null,null
+2021-02-08T00:00:00.000+0000,2021-02-08T00:00:00.000+0000,61109204,ZCS7: Gearoil cooler motor - replaced,Turbine 7,1,null,null
+2021-02-03T00:00:00.000+0000,2021-02-03T00:00:00.000+0000,61109204,ZCS7: Gearoil cooler motor - replaced,Turbine 7,1,null,Transmission Cooling system
+2021-02-01T00:00:00.000+0000,2021-02-01T00:00:00.000+0000,61109205,ZCS7: Chain hoist - repaired,Turbine 13,1,null,null
+2021-02-01T00:00:00.000+0000,2021-02-12T00:00:00.000+0000,61109205,ZCS7: Chain hoist - repaired,Turbine 13,1,null,Accessories No subsystem (Accessories)
+2021-02-01T00:00:00.000+0000,2021-02-01T00:00:00.000+0000,61109652,ZCS7: Gearoil pump assembly - replaced,Turbine 13,1,null,null
+2021-02-01T00:00:00.000+0000,2021-02-01T00:00:00.000+0000,61109846,ZCS7: Controller cabinet fan - replaced,Turbine 13,1,null,null
+2021-02-09T00:00:00.000+0000,2021-02-14T00:00:00.000+0000,61109846,ZCS7: Controller cabinet fan - replaced,Turbine 13,1,null,Controller No subsystem (Controler)
+2021-02-02T00:00:00.000+0000,2021-02-02T00:00:00.000+0000,61109851,ZCS7: Gear oil radiator - cleaned,Turbine 11,1,null,Transmission Cooling system
+2021-02-02T00:00:00.000+0000,2021-02-02T00:00:00.000+0000,61111211,ZCS7: Gear oil temp,Turbine 3,1,null,null
+2021-02-03T00:00:00.000+0000,2021-02-03T00:00:00.000+0000,61111314,ZCS7: Gearoil radiator - cleaned,Turbine 11,1,null,null
+2021-02-03T00:00:00.000+0000,2021-02-03T00:00:00.000+0000,61111314,ZCS7: Gearoil radiator - cleaned,Turbine 11,1,null,Transmission Cooling system
+2021-02-05T00:00:00.000+0000,2021-02-12T00:00:00.000+0000,61111378,ZCS7: Blade A valve error - Replaced,Turbine 14,1,null,null
+2021-02-03T00:00:00.000+0000,2021-02-03T00:00:00.000+0000,61111378,ZCS7: Blade A valve error - Replaced,Turbine 14,1,null,Pitch Pitch system Blade A
+2021-02-03T00:00:00.000+0000,2021-02-05T00:00:00.000+0000,61111577,ZCS7: Converter charging fuse - replaced,Turbine 14,1,null,null
+2021-02-10T00:00:00.000+0000,2021-02-18T00:00:00.000+0000,61111577,ZCS7: Converter charging fuse - replaced,Turbine 14,1,null,Converter No subsystem (Converter)
+2021-02-05T00:00:00.000+0000,2021-02-09T00:00:00.000+0000,61112226,ZCS7: LMU - replaced,Turbine 14,1,null,null
+2021-02-05T00:00:00.000+0000,2021-02-05T00:00:00.000+0000,61112226,ZCS7: LMU - replaced,Turbine 14,1,null,Controller No subsystem (Controler)
+2021-02-05T00:00:00.000+0000,2021-02-05T00:00:00.000+0000,61113154,ZCS7: 402 : TCM - Gearbox Inspection,Turbine 18,1,null,null
+2021-02-05T00:00:00.000+0000,2021-02-05T00:00:00.000+0000,61113432,ZCS7: 4101 : Gear oil temperature warning,Turbine 2,1,null,null
+2021-02-05T00:00:00.000+0000,2021-02-05T00:00:00.000+0000,61113622,ZCS7: Blade A valve error,Turbine 4,1,null,null
+2021-02-05T00:00:00.000+0000,2021-02-05T00:00:00.000+0000,61113622,ZCS7: Blade A valve error,Turbine 4,1,null,Pitch Pitch system Blade B
+2021-02-08T00:00:00.000+0000,2021-02-08T00:00:00.000+0000,61113818,ZCS7: 4101 : Gear oil temperature warning,Turbine 2,1,null,null
+2021-02-24T00:00:00.000+0000,2021-02-24T00:00:00.000+0000,61113867,ZCS7: Converter DC charge fuse - replaced,Turbine 7,1,null,null
+2021-02-09T00:00:00.000+0000,2021-02-24T00:00:00.000+0000,61113867,ZCS7: Converter DC charge fuse - replaced,Turbine 7,1,null,Converter No subsystem (Converter)
+2021-02-10T00:00:00.000+0000,2021-02-10T00:00:00.000+0000,61113870,ZCS7: 10 bar brake accumulator - replaced,Turbine 15,1,null,null
+2021-02-22T00:00:00.000+0000,2021-02-28T00:00:00.000+0000,61113870,ZCS7: 10 bar brake accumulator - replaced,Turbine 15,1,null,Brakes Pump station
+2021-02-17T00:00:00.000+0000,2021-02-17T00:00:00.000+0000,61114134,ZCS7: Coolant expansion tank - replaced,Turbine 14,1,null,null
+2021-02-17T00:00:00.000+0000,2021-02-17T00:00:00.000+0000,61114134,ZCS7: Coolant expansion tank - replaced,Turbine 14,1,null,Converter Cooling system
+2021-02-17T00:00:00.000+0000,2021-02-17T00:00:00.000+0000,61116869,ZCS7: Converter cabinet fan - replaced,Turbine 11,1,null,null
+2021-02-17T00:00:00.000+0000,2021-02-17T00:00:00.000+0000,61116869,ZCS7: Converter cabinet fan - replaced,Turbine 11,1,null,Converter No subsystem (Converter)
+2021-02-17T00:00:00.000+0000,2021-02-25T00:00:00.000+0000,61117062,ZCS7: 10128 : Too many yaw conv. errors,Turbine 16,1,null,null
+2021-02-19T00:00:00.000+0000,2021-02-24T00:00:00.000+0000,61117162,ZCS7: 10128 : Too many yaw conv. errors,Turbine 17,1,null,null
+2021-02-19T00:00:00.000+0000,2021-02-24T00:00:00.000+0000,61117883,ZCS7: 8455 : TCM-VS vibr planet high incr,Turbine 18,1,null,null
+2021-02-23T00:00:00.000+0000,2021-02-27T00:00:00.000+0000,61117909,ZCS7: 3236 : HubCheck valve fail - Stopped,Turbine 17,1,null,null
+2021-02-25T00:00:00.000+0000,2021-02-26T00:00:00.000+0000,61118060,ZCS7: 15229: GrdInv: 229 DSP comms failure,Turbine 2,1,null,null
+2021-02-22T00:00:00.000+0000,2021-02-22T00:00:00.000+0000,61118148,ZCS7: 4101 : Gear oil temperature warning,Turbine 2,1,null,null
+2021-02-23T00:00:00.000+0000,2021-02-23T00:00:00.000+0000,61118674,ZCS7: 8455 : TCM-VS vibr planet high incr,Turbine 18,1,null,null
+2021-02-23T00:00:00.000+0000,2021-02-25T00:00:00.000+0000,61119622,ZCS7: 4200 : Gearoilpump/blower superheated,Turbine 2,1,null,null
+2021-02-23T00:00:00.000+0000,2021-02-23T00:00:00.000+0000,61119839,ZCS7: Gen 2 Delta Leaking - Replaced,Turbine 13,1,null,null
+2021-02-23T00:00:00.000+0000,2021-02-23T00:00:00.000+0000,61119839,ZCS7: Gen 2 Delta Leaking - Replaced,Turbine 13,1,null,Converter No subsystem (Converter)
+2021-02-25T00:00:00.000+0000,2021-02-25T00:00:00.000+0000,61119870,ZCS7: Gear oil pump - Replaced,Turbine 14,1,null,null
+2021-02-25T00:00:00.000+0000,2021-02-25T00:00:00.000+0000,61120868,ZCS7: 13207 : Grid filter current overload,Turbine 17,1,null,null
+2021-02-25T00:00:00.000+0000,2021-02-25T00:00:00.000+0000,61122219,ZCS7: 1003 : Emergency switch activated,Turbine 2,1,null,null
+2021-02-25T00:00:00.000+0000,2021-02-28T00:00:00.000+0000,61123379,ZCS7: 4112 : Gearoil level too low,Turbine 9,1,null,null
+2021-02-25T00:00:00.000+0000,2021-02-26T00:00:00.000+0000,61123439,ZCS7: Converter coolant hose - repaired,Turbine 10,1,null,null
+2021-12-15T00:00:00.000+0000,2021-12-15T00:00:00.000+0000,61123439,ZCS7: Converter coolant hose - repaired,Turbine 10,1,null,Converter Cooling system
+2021-12-15T00:00:00.000+0000,2021-12-15T00:00:00.000+0000,61123598,ZCS7: 109/119 Valves,Turbine 4,1,null,null
+2021-11-18T00:00:00.000+0000,2021-11-18T00:00:00.000+0000,61123598,ZCS7: 109/119 Valves,Turbine 4,1,null,Pitch Pitch system Blade A
+2021-11-05T00:00:00.000+0000,2021-12-12T00:00:00.000+0000,61124756,ZCS7: 4200 : Gearoilpump/blower superheated,Turbine 2,1,null,null
+2021-11-29T00:00:00.000+0000,2021-12-12T00:00:00.000+0000,61124968,ZCS7: 15229 : GrdInv: 229 DSP comms failure,Turbine 2,1,null,null
+2021-11-20T00:00:00.000+0000,2021-11-21T00:00:00.000+0000,61124976,ZCS7: low coolant pressure,Turbine 10,1,null,null
+2021-11-28T00:00:00.000+0000,2021-11-30T00:00:00.000+0000,61124976,ZCS7: low coolant pressure,Turbine 10,1,null,Converter Cooling system
+2021-11-20T00:00:00.000+0000,2021-11-22T00:00:00.000+0000,61125157,ZCS7: 4101 : Gear oil temperature warning,Turbine 3,1,null,null
+2021-11-01T00:00:00.000+0000,2021-11-07T00:00:00.000+0000,61125962,ZCS7: low pressure / leaks,Turbine 10,1,null,null
+2021-11-08T00:00:00.000+0000,2021-11-28T00:00:00.000+0000,61125962,ZCS7: low pressure / leaks,Turbine 10,1,null,Converter Cooling system
+2021-11-12T00:00:00.000+0000,2021-11-12T00:00:00.000+0000,61126118,ZCS7: 63016 : Smoke in the inverter,Turbine 17,1,null,null
+2022-01-31T00:00:00.000+0000,2022-01-31T00:00:00.000+0000,61126303,ZCS7: Gearbox pressure transducer - replaced,Turbine 10,1,null,null
+2021-11-16T00:00:00.000+0000,2021-11-16T00:00:00.000+0000,61126306,ZCS7: Gear oil blower motor - replaced,Turbine 15,1,null,null
+2021-11-18T00:00:00.000+0000,2021-11-18T00:00:00.000+0000,61126306,ZCS7: Gear oil blower motor - replaced,Turbine 15,1,null,Transmission Cooling system
+2021-11-05T00:00:00.000+0000,2021-11-05T00:00:00.000+0000,61126808,ZCS7: 3236 : HubCheck valve fail - Stopped,Turbine 17,1,null,null
+2021-11-18T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61127127,ZCS7: 63002 : Backup battery error,Turbine 17,1,null,null
+2021-11-01T00:00:00.000+0000,2021-11-03T00:00:00.000+0000,61131143,ZCS7: 4111 : Gear oil pressure too high/low,Turbine 18,1,null,null
+2021-11-01T00:00:00.000+0000,2021-11-02T00:00:00.000+0000,61131867,ZCS7: low coolant,Turbine 1,1,null,null
+2021-11-12T00:00:00.000+0000,2021-11-12T00:00:00.000+0000,61131867,ZCS7: low coolant,Turbine 1,1,null,Converter Cooling system
+2021-11-03T00:00:00.000+0000,2021-11-04T00:00:00.000+0000,61131922,ZCS7: Vienna T15 gearbox exchange,Turbine 18,1,null,null
+2021-11-03T00:00:00.000+0000,2021-11-03T00:00:00.000+0000,61132123,ZCS7: Gear oil temp,Turbine 1,1,null,null
+2021-11-05T00:00:00.000+0000,2021-11-05T00:00:00.000+0000,61133427,ZCS7: Hub Pressure Switch,Turbine 4,1,null,null
+2021-11-29T00:00:00.000+0000,2021-11-30T00:00:00.000+0000,61133427,ZCS7: Hub Pressure Switch,Turbine 4,1,null,Pitch Pitch system Blade B
+2021-11-19T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61133552,ZCS7: Gear oil pump assembly - replaced,Turbine 12,1,null,null
+2021-11-08T00:00:00.000+0000,2021-12-10T00:00:00.000+0000,61133803,ZCS7: Gear oil pump/blower superheated,Turbine 8,1,null,null
+2021-11-08T00:00:00.000+0000,2021-12-10T00:00:00.000+0000,61133803,ZCS7: Gear oil pump/blower superheated,Turbine 8,1,null,Transmission Cooling system
+2021-11-09T00:00:00.000+0000,2021-11-09T00:00:00.000+0000,61137197,ZCS7: 4304 : Offline filter stopped,Turbine 19,1,null,null
+2021-11-09T00:00:00.000+0000,2021-11-09T00:00:00.000+0000,61140889,ZCS7: low coolant,Turbine 10,1,null,Converter Cooling system
+2021-11-09T00:00:00.000+0000,2021-11-09T00:00:00.000+0000,61141307,ZCS7: 90159 : Generator segment temperature de,Turbine 18,1,null,null
+2021-11-09T00:00:00.000+0000,2021-11-09T00:00:00.000+0000,61143178,ZCS7: 3140 : Valve supplyvoltage too low,Turbine 18,1,null,null
+2021-11-10T00:00:00.000+0000,2021-11-10T00:00:00.000+0000,61143352,ZCS7: Converter coolant hose - repaired,Turbine 10,1,null,null
+2021-11-29T00:00:00.000+0000,2021-11-30T00:00:00.000+0000,61143352,ZCS7: Converter coolant hose - repaired,Turbine 10,1,null,Converter Cooling system
+2021-11-12T00:00:00.000+0000,2021-11-12T00:00:00.000+0000,61143422,ZCS7: low coolant,Turbine 1,1,null,null
+2021-11-15T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61143422,ZCS7: low coolant,Turbine 1,1,null,Converter Cooling system
+2021-11-13T00:00:00.000+0000,2021-11-13T00:00:00.000+0000,61143615,ZCS7: 4200 : Gearoilpump/blower superheated,Turbine 16,1,null,null
+2021-11-29T00:00:00.000+0000,2021-12-03T00:00:00.000+0000,61143681,ZCS7: Morning Light T18 gearbox exchange,Turbine 14,1,null,null
+2021-11-15T00:00:00.000+0000,2021-12-15T00:00:00.000+0000,61143681,ZCS7: Morning Light T18 gearbox exchange,Turbine 14,1,null,Blades Root (Blades)
+2021-11-16T00:00:00.000+0000,2021-11-16T00:00:00.000+0000,61144297,ZCS7: low coolant- leaking radiator,Turbine 10,1,null,null
+2021-11-19T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61144297,ZCS7: low coolant- leaking radiator,Turbine 10,1,null,Converter Cooling system
+2021-11-19T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61144516,ZCS7: Gear oil Pressure too H/L,Turbine 8,1,null,null
+2021-11-29T00:00:00.000+0000,2021-11-30T00:00:00.000+0000,61144516,ZCS7: Gear oil Pressure too H/L,Turbine 8,1,null,Controller No subsystem (Controler)
+2021-11-19T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61144629,ZCS7: main breaker cut out,Turbine 10,1,null,null
+2021-11-30T00:00:00.000+0000,2021-11-30T00:00:00.000+0000,61144629,ZCS7: main breaker cut out,Turbine 10,1,null,Controller No subsystem (Controler)
+2021-11-17T00:00:00.000+0000,2021-11-17T00:00:00.000+0000,61145666,ZCS7: Pitch pawl - replaced,Turbine 10,1,null,null
+2021-11-17T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61145666,ZCS7: Pitch pawl - replaced,Turbine 10,1,null,Pitch Pitch system Blade A
+2021-11-19T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61145669,ZCS7: Broken blade bolts - replaced,Turbine 7,1,null,null
+2021-11-19T00:00:00.000+0000,2021-11-30T00:00:00.000+0000,61145669,ZCS7: Broken blade bolts - replaced,Turbine 7,1,null,Blades No subsystem (Blades)
+2021-11-19T00:00:00.000+0000,2021-12-15T00:00:00.000+0000,61146672,ZCS7: Blade Bolts,Turbine 8,1,null,null
+2021-11-18T00:00:00.000+0000,2021-11-18T00:00:00.000+0000,61146672,ZCS7: Blade Bolts,Turbine 8,1,null,Blades No subsystem (Blades)
+2021-11-18T00:00:00.000+0000,2021-11-18T00:00:00.000+0000,61148476,ZCS7: T097 - HS-GEN Gearbearing Temp Warning,Turbine 6,1,null,null
+2021-11-29T00:00:00.000+0000,2021-11-30T00:00:00.000+0000,61148476,ZCS7: T097 - HS-GEN Gearbearing Temp Warning,Turbine 6,1,null,Transmission Cooling system
+2021-12-01T00:00:00.000+0000,2021-12-05T00:00:00.000+0000,61148686,ZCS7: Grid filter fuse blown,Turbine 5,1,null,null
+2021-12-02T00:00:00.000+0000,2021-12-05T00:00:00.000+0000,61148686,ZCS7: Grid filter fuse blown,Turbine 5,1,null,Converter No subsystem (Converter)
+2021-11-18T00:00:00.000+0000,2021-11-18T00:00:00.000+0000,61173013,ZCS7: Gear oil pump/blower superheated - repla,Turbine 15,1,null,null
+2021-11-18T00:00:00.000+0000,2021-11-18T00:00:00.000+0000,61176398,ZCS7: 4101 : Gear oil temperature warning,Turbine 19,1,null,null
+2021-11-18T00:00:00.000+0000,2021-11-18T00:00:00.000+0000,61180380,ZCS7: 4102 : Gear oil temperature high,Turbine 20,1,null,null
+2021-11-19T00:00:00.000+0000,2021-11-24T00:00:00.000+0000,61182161,ZCS7: Gear oil radiator - cleaned,Turbine 12,1,null,null
+2021-11-19T00:00:00.000+0000,2021-11-24T00:00:00.000+0000,61182161,ZCS7: Gear oil radiator - cleaned,Turbine 12,1,null,Transmission Cooling system
+2021-11-19T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61183992,"ZCS7: 15213: GrdInv: 213 Undiagnosed,DELTA2",Turbine 2,1,null,null
+2021-11-19T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61183992,"ZCS7: 15213: GrdInv: 213 Undiagnosed,DELTA2",Turbine 2,1,null,Converter No subsystem (Converter)
+2021-11-19T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61184737,ZCS7: Converter coolant hose - repaired,Turbine 14,1,null,null
+2021-11-19T00:00:00.000+0000,2021-11-19T00:00:00.000+0000,61184737,ZCS7: Converter coolant hose - repaired,Turbine 14,1,null,Converter Cooling system
+2021-11-23T00:00:00.000+0000,2021-11-24T00:00:00.000+0000,61185308,ZCS7: gear oil temp,Turbine 5,1,null,null
+2021-11-24T00:00:00.000+0000,2021-11-24T00:00:00.000+0000,61185308,ZCS7: gear oil temp,Turbine 5,1,null,Transmission Cooling system
+2021-11-23T00:00:00.000+0000,2021-11-23T00:00:00.000+0000,61185489,ZCS7: Gear oil radiator - cleaned,Turbine 7,1,null,null
+2021-11-24T00:00:00.000+0000,2021-11-24T00:00:00.000+0000,61185489,ZCS7: Gear oil radiator - cleaned,Turbine 7,1,null,Transmission Cooling system
+2021-11-24T00:00:00.000+0000,2021-11-24T00:00:00.000+0000,61186348,ZCS7: 4102 : Gear oil temperature high,Turbine 3,1,null,null
+2021-11-29T00:00:00.000+0000,2021-11-29T00:00:00.000+0000,61186857,ZCS7: M-system Mark2 - exchanged,Turbine 10,1,null,null
+2021-11-29T00:00:00.000+0000,2022-01-18T00:00:00.000+0000,61186857,ZCS7: M-system Mark2 - exchanged,Turbine 10,1,null,Monitoring equipment TCM system
+2021-12-02T00:00:00.000+0000,2021-12-03T00:00:00.000+0000,61187882,ZCS7: Yaw converter error - repaired,Turbine 15,1,null,null
+2021-12-02T00:00:00.000+0000,2021-12-02T00:00:00.000+0000,61187882,ZCS7: Yaw converter error - repaired,Turbine 15,1,null,Yaw No subsystem (Yaw)
+2022-01-24T00:00:00.000+0000,2022-01-26T00:00:00.000+0000,61187909,ZCS7: Converter coolant hose - repaired,Turbine 12,1,null,null
+2021-12-07T00:00:00.000+0000,2021-12-16T00:00:00.000+0000,61187909,ZCS7: Converter coolant hose - repaired,Turbine 12,1,null,Converter Cooling system
+2021-12-16T00:00:00.000+0000,2021-12-16T00:00:00.000+0000,61187977,ZCS7: 15049: GrdInv: 49 D3U curr. high,Turbine 2,1,null,null
+2021-12-06T00:00:00.000+0000,2021-12-06T00:00:00.000+0000,61188429,ZCS7: Hydro Level Error,Turbine 8,1,null,null
+2021-12-06T00:00:00.000+0000,2021-12-06T00:00:00.000+0000,61188429,ZCS7: Hydro Level Error,Turbine 8,1,null,Hydraulics No subsystem (Hydraulics)
+2021-12-07T00:00:00.000+0000,2021-12-07T00:00:00.000+0000,61189228,ZCS7: MCB - reset,Turbine 10,1,null,null
+2021-12-07T00:00:00.000+0000,2021-12-07T00:00:00.000+0000,61189228,ZCS7: MCB - reset,Turbine 10,1,null,Controller No subsystem (Controler)
+2021-12-08T00:00:00.000+0000,2021-12-08T00:00:00.000+0000,61190362,ZCS7: 4102 : Gear oil temperature high,Turbine 3,1,null,null
