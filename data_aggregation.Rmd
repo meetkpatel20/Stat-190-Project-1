@@ -1,0 +1,44 @@
+---
+title: "data_aggregation"
+output: html_document
+date: "2023-02-15"
+---
+
+## Cleaning environment
+```{r}
+rm(list=ls())
+```
+
+```{r}
+# Load packages
+install.packages("tidyverse")
+library(tidyverse)
+
+install.packages("lubridate")
+library(lubridate)
+```
+## Importing the data
+```{r}
+all_turbine = read.csv(file.choose(),header=T)
+```
+
+## Making the column time_interval a time object
+```{r }
+# R doesn't know start_date and end_date are dates - they were read in as numeric
+# convert those both to date objects
+all_turbine$Time = ymd_hms(all_turbine$Time)
+```
+
+## Rounding the time_interval column to "10 minutes"
+```{r}
+all_turbine$interval_time = round_date(all_turbine$Time, "10 mins")
+````
+
+
+```{r}
+
+````
+
+
+
+
