@@ -40,6 +40,15 @@ ims_and_oil = merge(new_ims_bearing_temp_all, new_oil_temp, by.x = c('Group.1', 
 show(ims_and_oil)
 ````
 
+## changing colounm names
+```{r}
+colnames(ims_and_oil)[1] <- 'TimeStamp'
+colnames(ims_and_oil)[2] <- 'TurbineName'
+colnames(ims_and_oil)[3] <- 'IMS Bearing Temp'
+colnames(ims_and_oil)[4] <- 'Oil Temp'
+
+```
+
 
 
 
