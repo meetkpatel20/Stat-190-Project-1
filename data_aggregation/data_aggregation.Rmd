@@ -34,9 +34,10 @@ all_turbine$Time = ymd_hms(all_turbine$Time)
 all_turbine$interval_time = round_date(all_turbine$Time, "10 mins")
 ````
 
-
+## merging data frames
 ```{r}
-
+ims_and_oil = merge(new_ims_bearing_temp_all, new_oil_temp, by.x = c('Group.1', 'Group.2'), by.y = c('Group.1', 'Group.2'))
+show(ims_and_oil)
 ````
 
 
