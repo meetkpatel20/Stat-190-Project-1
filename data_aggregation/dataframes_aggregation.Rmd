@@ -1,0 +1,89 @@
+---
+title: "dataframes_aggregation"
+output: html_document
+date: "2023-02-22"
+---
+
+# Clean environment
+
+```{r}
+rm(list=ls())
+```
+
+## Importing library for the right_join
+
+```{r}
+library(dplyr)
+```
+
+## Importing the Windspeed, Generator and Fault Codes Dataframes
+
+I am importing all the dataframes that I will join and also the dataframe called ims_and_oil which a team mate shared and later would become the master file with all the aggregated data
+
+```{r}
+All_windspeed_agg_1 = read.csv(file.choose(),header=T)
+All_generator_rpm_agg_1 = read.csv(file.choose(),header=T)
+All_fault_codes_agg_1 = read.csv(file.choose(),header=T)
+```
+
+## Rename my teammate's column to make it look like mine for ease in later join
+```{r}
+ims_and_oil_agg_1  = read.csv(file.choose(),header=T)
+colnames(ims_and_oil_agg_1)[2] <- "interval_time"
+```
+
+## Checking for null values in all dataframes
+```{r}
+is.null(All_windspeed_agg_1)     #[1] FALSE
+is.null(All_generator_rpm_agg_1) #[1] FALSE
+is.null(All_fault_codes_agg_1)   #[1] FALSE
+is.null(ims_and_oil_agg_1)     #[1] FALSE
+```
+
+## Merging all data frames with by matching two primary keys
+
+Merging the Windspeed, Generator and Fault Codes Dataframes using the primary keys of: TurbineName and interval_time that both share
+
+```{r}
+wind_generator = full_join(All_windspeed_agg_1,All_generator_rpm_agg_1, by = c('TurbineName'='TurbineName', 'interval_time'='interval_time'))
+
+is.null(wind_generator) #[1] FALSE
+
+ims_wind_generator = full_join(wind_generator,ims_and_oil_agg_1, by = c('TurbineName'='TurbineName', 'interval_time'='interval_time'))
+
+is.null(ims_wind_generator) #[1] FALSE
+```
+
+
+
+```{r}
+new_data = right_join(merged_data,All_fault_codes, by = c('TurbineName'='TurbineName', 'interval_time'='interval_time'))
+```
+
+## Dropping the not-wanted columns
+
+I am only interested in joining the numerical columns of my dataframes to the master file, so I will drop the following chategorical columns:
+
+TimeStamp.x
+Date.x 
+MetricName.x 
+TimeStamp.y 
+Date.y 
+MetricName.y
+
+```{r}
+drop_column = subset(new_data, select = -c(TimeStamp.x,Date.x,MetricName.x,TimeStamp.y,Date.y,MetricName.y))
+```
+
+
+## Adding my teammate column's to the master_data file
+```{r}
+master_data = right_join(ims_and_oil_1,drop_column, by = c('TurbineName'='TurbineName', 'interval_time'='interval_time'))
+```
+
+## Code Sources: 
+
+ - How to merge dataframes by join: https://www.youtube.com/watch?v=jsxwF69wYaE.  
+
+
+
