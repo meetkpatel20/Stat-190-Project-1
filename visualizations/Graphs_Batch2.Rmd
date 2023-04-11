@@ -1,0 +1,150 @@
+---
+title: "Graphs_Batch2"
+output: html_document
+date: "2023-04-11"
+---
+
+# Batch Data 2 Graphs
+
+This file shows exploratory graphs that read from the second batch of data provided by the customer on April 2023. The data used for this process contains null values and contains no mean input, given that using the column mean did not provide an accurate visual of how the data is distributed.
+
+## Fault Codes Occurrence VS Sensor Data
+
+In this section, we are exploring all sensor variables against each other and if any of the variables have a significant correlation with sensor data parameters.
+
+### Cleaning the environment
+
+```{r }
+rm(list=ls())
+```
+
+### Importing the data
+```{r }
+GraphData = read.csv(file.choose(),header=T)
+```
+
+### Loading the required libraries to graph our data
+```{r }
+library(ggplot2) 
+```
+
+#### Graphing Oil Temperature VS Windspeed
+```{r }
+ggplot(GraphData, aes(x = Oil.Temp, y = WindSpeed, 
+                       color = ErrorOccurrence), alpha = 0.4) +
+  geom_point() + 
+  labs(title="WindSpeed VS Oil Temperature", subtitle = "Oil Temperature < 35 and >60 & WindSpeed > 27.5 seems to lead to a Fault Code", x="Oil Temperature", y="WindSpeed") + 
+  facet_wrap(vars(ifelse(ErrorOccurrence == 'No', "No Fault Happens", "Fault Happens")),nrow=2)
+```
+#### Graphing WindSpeed VS Kilowatts
+```{r }
+ggplot(GraphData, aes(x = kilowatts , y = WindSpeed, 
+                       color = ErrorOccurrence), alpha = 0.4) +
+  geom_point() + 
+  stat_summary(fun = mean, geom = "line", aes(group = 1), color = "black", size = 0.5)+
+  labs(title="WindSpeed VS Kilowatts", subtitle = "It seems that Kilowatts its not very dependent on WindSpeed", x="Kilowatts ", y="WindSpeed") + 
+  facet_wrap(vars(ifelse(ErrorOccurrence == 'No', "No Fault Happens", "Fault Happens")),nrow=2)
+```
+#### Graphing WindSpeed VS Pounds Per Square Inch (PSI)
+```{r }
+#avg_psi <- mean(GraphData$psi)
+ggplot(GraphData, aes(x = psi, y = WindSpeed, 
+                       color = ErrorOccurrence), alpha = 0.4) +
+  geom_point() + 
+  labs(title="WindSpeed VS Pounds Per Square Inch (PSI)", 
+       subtitle = "Even thought there are some outliers aruond 150 PSI, there seems like lower PSI means 
+more propensity for a fault code to happen. ", 
+       x="Pounds Square Inch (PSI)", 
+       y="WindSpeed") + 
+  facet_wrap(vars(ifelse(ErrorOccurrence == 'No', "No Fault Happens", "Fault Happens")),nrow=2)
+```
+#### Graphing WindSpeed VS Ambient Temperature (Celsius)
+```{r }
+ggplot(GraphData, aes(x = ambient_temp, y = WindSpeed, 
+                       color = ErrorOccurrence), alpha = 0.4) +
+  geom_point() + 
+  labs(title="WindSpeed VS Ambient Temperature (Celsius)", 
+       subtitle = " ", 
+       x="Ambient Temperature (Celsius)", 
+       y="WindSpeed") + 
+  facet_wrap(vars(ifelse(ErrorOccurrence == 'No', "No Fault Happens", "Fault Happens")),nrow=2)
+```
+#### Graphing WindSpeed VS IMS Bearing Temperature
+```{r }
+ggplot(GraphData, aes(x = IMS.Bearing.Temp, y = WindSpeed, 
+                       color = ErrorOccurrence), alpha = 0.4) +
+  geom_point() + 
+  labs(title="WindSpeed VS IMS Bearing Temperature", 
+       subtitle = " ", 
+       x="IMS Bearing Temperature", 
+       y="WindSpeed") + 
+  facet_wrap(vars(ifelse(ErrorOccurrence == 'No', "No Fault Happens", "Fault Happens")),nrow=2)
+```
+
+
+```{r }
+ 
+```
+
+
+```{r }
+  
+```
+
+
+
+```{r }
+  
+```
+
+
+
+```{r }
+  
+```
+
+
+
+
+```{r }
+  
+```
+
+
+
+
+```{r }
+  
+```
+
+
+
+
+```{r }
+  
+```
+
+
+
+
+```{r }
+  
+```
+
+
+
+```{r }
+  
+```
+
+
+
+```{r }
+  
+```
+
+
+
+```{r }
+  
+```
