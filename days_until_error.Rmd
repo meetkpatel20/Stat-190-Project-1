@@ -1,0 +1,64 @@
+---
+title: "days_until_error"
+output: html_document
+date: "2023-04-24"
+---
+
+## Cleaning environment
+
+```{r}
+rm(list=ls())
+```
+
+## Installing required packages
+
+```{r}
+# Load packages
+install.packages("tidyverse")
+library(tidyverse)
+install.packages("lubridate")
+library(lubridate)
+```
+
+## Importing the data
+```{r} 
+FullWithNulls = read.csv(file.choose(),header=T)
+```
+
+## Create the days_until_fault happened column
+```{r} 
+# Start the column as with all values set to NA
+FullWithNulls$days_until_fault <- NA
+```
+
+## Relocate days_until_fault to front of dataframe and sorting by TurbineName and interval_name
+```{r} 
+# Moving the column days_until_fault after column WindSpeed
+FullWithNulls <- FullWithNulls %>% relocate(days_until_fault, .after =WindSpeed) %>%
+  arrange(TurbineName, interval_time)
+```
+
+## Count the number of days until an ErrorType_BalanceOfPlant_Happened
+```{r}
+
+for (i in c(1:nrow(FullWithNulls))){
+  if(FullWithNulls$ErrorType_BalanceOfPlant_Happened[i] == "Yes") {
+    FullWithNulls$days_until_fault[i] = 0
+}
+  else if (FullWithNulls %>% filter(TurbineName == FullWithNulls$TurbineName[i] &
+                               interval_time >= FullWithNulls$interval_time[i] & 
+                               ErrorType_BalanceOfPlant_Happened == "Yes") %>% nrow() == 0){
+ #do nothing    
+}
+    else {
+   temp <- FullWithNulls %>% filter(TurbineName == FullWithNulls$TurbineName[i] &
+                                    interval_time >= FullWithNulls$interval_time[i] &
+                                    ErrorType_BalanceOfPlant_Happened == "Yes") %>%
+     select(interval_time) %>% slice_head() %>% pluck(1) # assumes first row is the earliest occurence
+   FullWithNulls$days_until_fault[i] <- as.numeric(as_date(temp) - as_date(FullWithNulls$interval_time[i]))
+   }
+ }
+```
+
+
+
