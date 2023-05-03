@@ -1,0 +1,31 @@
+grouping <- function(data){
+  data$V2 <- ymd_hms(data$V2)
+  data$Round_Time <- round_date(data$V2, "1 hour")
+  data <- data %>% group_by(V1, Round_Time) %>% summarise(Avg_Value = mean(V4, na.rm=TRUE),
+                                                          Min_Value = min(V4, na.rm=TRUE),
+                                                          Max_Value = max(V4, na.rm=TRUE))
+}
+
+# call functions on each dataset
+wind = grouping(wind)
+oil_temp = grouping(oil_temp)
+rpm = grouping(rpm)
+g1 = grouping(g1)
+g2 = grouping(g2)
+g3 = grouping(g3)
+ap = grouping(ap)
+at = grouping(at)
+hp = grouping(hp)
+
+# combine gearbox data together
+gearbox <- rbind(g1, g2, g3)
+
+# join fault code data to other data sets
+df1 <- fc %>% 
+  full_join(wind, by=c("Round_Time"="Round_Time", "V1"="V1")) %>%
+  full_join(oil_temp, by=c("Round_Time"="Round_Time", "V1"="V1")) %>% 
+  full_join(rpm, by=c("Round_Time"="Round_Time", "V1"="V1")) %>%
+  full_join(gearbox, by=c("Round_Time"="Round_Time", "V1"="V1")) %>%
+  full_join(ap, by=c("Round_Time"="Round_Time", "V1"="V1")) %>%
+  full_join(at, by=c("Round_Time"="Round_Time", "V1"="V1")) %>%
+  full_join(hp, by=c("Round_Time"="Round_Time", "V1"="V1"))
