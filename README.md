@@ -19,20 +19,21 @@ After cleaning and merging the data, we explored the relationships between our e
 ## Libraries Used
 The following R packages were used in the project:
 
-ggplot2
-lubridate
-tidyverse
-gridExtra
-dplyr
-hrbrthemes
-magrittr
-randomForest
-pROC
-MASS
-rlist
-e1071
-caTools
-class
+- ggplot2
+- lubridate
+- tidyverse
+- gridExtra
+- dplyr
+- hrbrthemes
+- magrittr
+- randomForest
+- pROC
+- MASS
+- rlist
+- e1071
+- caTools
+- class
+ 
 ## Files
 
 bhe_data.csv: The final dataset used for the models, containing over 56 explanatory variables.
