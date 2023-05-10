@@ -13,9 +13,6 @@ The project used turbine sensor reading data and fault error data provided by Be
 ### Cleaning
 The sensor and fault error data were initially given in the format of folders with several csv files for each quantitative variable. To make this useful, we had to merge the set of files for each variable into one dataset, then merge the variable datasets together by timestamp into one bigger data frame. We also decided to aggregate the data by 10-minute intervals. However, our decision to do small, 10-minute intervals proved to be more challenging because of how large our datasets are.
 
-### Exploration & Findings
-After cleaning and merging the data, we explored the relationships between our explanatory variables and the target variable, Balance of Plant errors. We found that the Gearbox Oil Temperature, Ambient Temperature, and Hydraulic Pressure were...
-
 ## Libraries Used
 The following R packages were used in the project:
 
