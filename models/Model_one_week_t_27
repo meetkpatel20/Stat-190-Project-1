@@ -1,0 +1,252 @@
+---
+title: "Modelling"
+output: html_document
+date: "2023-04-26"
+---
+
+### References: <https://www.r-bloggers.com/2021/04/how-to-plot-xgboost-trees-in-r/>.
+
+### XGBOOST:<https://www.youtube.com/watch?v=u3VSYT4ieVc&ab_channel=DataNinjas>
+
+## Cleaning environment
+
+```{r}
+rm(list=ls())
+```
+
+# Random Forest Classifier
+
+## Loading packages
+
+```{r}
+#loading packages
+library(ggplot2)
+library(lubridate)
+library(tidyverse)
+library(gridExtra)
+library(dplyr)
+library(hrbrthemes)
+library(magrittr)
+library(randomForest)
+library(pROC)
+library(imputeTS)
+library(MASS)
+library(rlist)
+library(e1071)
+library(caTools)
+library(class)
+
+```
+
+## Loading the data
+
+```{r}
+ModelData = read.csv(file.choose(),header=T)
+ModelData <- ModelData[ModelData$TurbineName == "Turbine 27",]
+```
+
+## Get rid of the non-wanted columns and make different subsets for different models
+
+```{r}
+## Data for the model predicting if the error will happen within one day of the sensor reading
+ModelData_Happen1 <- subset(ModelData, select=-c(TurbineName,interval_time, 
+                                             Happen_2_days,Happen_3_days, Happen_one_week, ErrorOccurrence))
+ncol(ModelData_Happen1) # 50
+
+## Make the y-variable a factor
+ModelData_Happen1$Happen_1_day <- as.factor(ModelData_Happen1$Happen_1_day)
+
+# ----------------------------------------------------------------------------------------------------------------
+## Data for the model predicting if the error will happen within two days of the sensor reading
+ModelData_Happen2 <- subset(ModelData, select=-c(TurbineName,interval_time, 
+                                             Happen_1_day,Happen_3_days, Happen_one_week,ErrorOccurrence))
+ncol(ModelData_Happen2) # 50
+
+## Make the y-variable a factor
+ModelData_Happen2$Happen_2_days <- as.factor(ModelData_Happen2$Happen_2_days)
+# ----------------------------------------------------------------------------------------------------------------
+## Data for the model predicting if the error will happen within three days of the sensor reading
+ModelData_Happen3 <- subset(ModelData, select=-c(TurbineName,interval_time, 
+                                            Happen_1_day,Happen_2_days, Happen_one_week,ErrorOccurrence))
+ncol(ModelData_Happen3) # 50
+
+## Make the y-variable a factor
+ModelData_Happen3$Happen_3_days <- as.factor(ModelData_Happen3$Happen_3_days)
+
+# ----------------------------------------------------------------------------------------------------------------
+## Data for the model predicting if the error will happen within one week of the sensor reading
+ModelData_HappenWeek <- subset(ModelData, select=-c(TurbineName,interval_time, 
+                                             Happen_1_day,Happen_2_days,Happen_3_days,ErrorOccurrence))
+ncol(ModelData_HappenWeek) # 50
+
+## Make the y-variable a factor
+ModelData_HappenWeek$Happen_one_week <- as.factor(ModelData_HappenWeek$Happen_one_week)
+
+```
+
+```{r}
+#set the seed
+RNGkind(sample.kind = "default")
+set.seed(2291352)
+
+```
+
+## Fit baseline random forest
+
+```{r}
+train.idx <- sample(x = 1:nrow(ModelData_HappenWeek), size = .7*nrow(ModelData_HappenWeek))
+train.df <- ModelData_HappenWeek[train.idx,]
+test.df <- ModelData_HappenWeek[-train.idx,]
+
+baseline_forest <- randomForest(Happen_one_week ~ . ,
+                                data = train.df,
+                                ntree = 1000,
+                                mtry = sqrt(50), #sqrt(51) as number of x's to sample for each tree
+                                importance = TRUE)
+```
+
+## Confusion matrix of the baseline forest
+
+### Baseline Forest Results
+Call:
+ randomForest(formula = Happen_1_day ~ ., data = train.df, ntree = 1000,      mtry = sqrt(51), importance = TRUE) 
+               Type of random forest: classification
+                     Number of trees: 1000
+No. of variables tried at each split: 7
+
+        OOB estimate of  error rate: 0.08%
+Confusion matrix:
+        no  yes  class.error
+no  127147   11 8.650655e-05
+yes     97 1082 8.227311e-02
+```{r}
+baseline_forest
+```
+
+
+## Model tunning
+
+```{r}
+## 50 x variables
+mtry <- c(1:50)
+
+keeps <- data.frame(m = rep(NA, length(mtry)),
+                    OOB_error_rate = rep(NA, length(mtry)))
+
+for (idx in 1:length(mtry)){
+  
+  print(paste0("Fitting m = ", mtry[idx]))
+  
+  tempforest <- randomForest(Happen_one_week ~ . ,
+                             data = train.df,
+                             ntree = 500,
+                             mtry = mtry[idx]) #mtry is varying with idx
+  
+  
+  #record the corresponding OOB error
+  keeps[idx, "m"] <- mtry[idx]
+  keeps[idx, "OOB_error_rate"] <-mean(predict(tempforest) != train.df$Happen_one_week)
+  
+}
+
+keeps
+
+```
+
+
+## Tunning Results
+```{r}
+min_m <- which.min(keeps$OOB_error_rate)  # find index of smallest value
+min_error_rate <- keeps$OOB_error_rate[min_m]  # get smallest error rate value
+min_m_value <- keeps$m[min_m]  # get corresponding m value
+
+ggplot(data = keeps) +
+  geom_line(aes(x = m, y = OOB_error_rate)) +
+  geom_vline(xintercept = min_m_value, color = "red") + # add vertical line at minimum error rate
+  scale_x_continuous(breaks = seq(0, 51, 5)) + # add more space between numbers on x axis
+  labs(x = "m (mtry): # of x variables sampled",
+       y = "OOB Error Rate") +
+  annotate("text", x = min_m_value, y = min_error_rate, label = paste0("Min error rate at m = ", min_m_value), vjust = 1.5, color = "red") # add label at minimum error rate
+
+```
+
+## Fitting finalized model
+Given that the least error happened when mtry = 18, I will use that tunned value on the foloowing model
+```{r}
+
+
+TunnedForest <- randomForest(Happen_one_week ~ .,
+                            data = train.df,
+                            ntree = 1000,
+                            mtry = 18, #based on tuning above
+                            importance = TRUE)
+```
+
+
+## Confusion Matrix of Tunned Forest
+### Baseline Forest Results
+
+Call:
+ randomForest(formula = Happen_1_day ~ ., data = train.df, ntree = 1000,      mtry = 18, importance = TRUE) 
+               Type of random forest: classification
+                     Number of trees: 1000
+No. of variables tried at each split: 18
+
+        OOB estimate of  error rate: 0.04%
+Confusion matrix:
+        no  yes  class.error
+no  127137   21 0.0001651489
+yes     36 1143 0.0305343511
+```{r}
+TunnedForest
+```
+
+```{r}
+#Let's save the results of that forest into a csv file
+save(TunnedForest, file = "TurbineForest.RData")
+
+```
+
+```{r}
+pi_hat <- predict(TunnedForest, test.df, type = 'prob')[,"yes"]
+
+```
+
+## Plot ROC Curve
+```{r}
+rocCurve <- roc(response = test.df$Happen_one_week,
+                predictor = pi_hat,
+                levels = c("no","yes"))
+plot(rocCurve, print.thres = TRUE, print.auc = TRUE)
+
+```
+
+```{r}
+pi_star <- coords(rocCurve, "best", ret = "threshold")$threshold[1]
+pi_star # [1] 0.245
+test.df$forest_pred <- as.factor(ifelse(pi_hat > pi_star, 'yes', 'no'))
+View(test.df)
+```
+
+```{r}
+y_hat <- as.factor(ifelse(pi_hat > pi_star, 'yes', 'no'))
+table(y_hat, test.df$Happen_one_week)
+```
+
+
+```{r}
+varImpPlot(TunnedForest, type = 1)
+# Increase spacing between y-axis values
+par(cex.axis = 1)  # adjust cex.axis to increase spacing
+varImpPlot(TunnedForest, type = 1, horiz = TRUE, las = 1)
+```
+
+
+```{r}
+
+```
+
+```{r}
+
+
+```
