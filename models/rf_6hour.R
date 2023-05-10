@@ -483,7 +483,7 @@ train_index <- createDataPartition(forest_data_all$ErrorOccurrence, p = 0.8, lis
 train_data <- forest_data_all[train_index, ]
 test_data <- forest_data_all[-train_index, ]
 
-## RF1 (Turbine 31) NO TUNING
+## RF1 (ALL Turbines) NO TUNING
 rf1_all <- randomForest(ErrorOccurrence ~ .,
                         data = train_data,
                         ntree = 200,
@@ -517,7 +517,7 @@ plot(keeps, type="l")
 smallest <- min(keeps$OOB_error_rate)
 best <- which(keeps$OOB_error_rate==smallest)
 
-## RF2 (Turbine 31) TUNED!
+## RF2 (ALL Turbines) TUNED!
 rf2_all <- randomForest(ErrorOccurrence ~ .,
                         data = train_data,
                         ntree = 200,
