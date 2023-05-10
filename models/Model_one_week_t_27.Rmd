@@ -237,8 +237,8 @@ table(y_hat, test.df$Happen_one_week)
 ```{r}
 varImpPlot(TunnedForest, type = 1)
 # Increase spacing between y-axis values
-par(cex.axis = 1)  # adjust cex.axis to increase spacing
-varImpPlot(TunnedForest, type = 1, horiz = TRUE, las = 1)
+par(cex = .7)  # adjust cex.axis to increase spacing
+varImpPlot(TunnedForest, type = 1, horiz = TRUE, las = 1,)
 ```
 
 
