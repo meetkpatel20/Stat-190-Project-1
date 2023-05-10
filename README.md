@@ -48,6 +48,10 @@ The following R packages were used in the project:
 - e1071
 - caTools
 - class
+
+The following Python libraries were used in this project:
+
+- Pandas
  
 ## Files
 
